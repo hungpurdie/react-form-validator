@@ -4,6 +4,8 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client", "vite-plugin-svgr/client"],
     "baseUrl": "./src",
+    "outDir": "./dist",
+    "typeRoots": ["node_modules/@types"],
     "paths": {
       "~/*": ["./*"],
       "~/components/*": ["./components/*"],
@@ -22,7 +24,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "files": ["index.d.ts"],
-  "include": ["src", "vite.config.ts", "src/@types"],
+  "include": ["src", "vite.config.ts", "src/@types/index.d.ts"],
   "exclude": ["node_modules", "../tsconfig.json"]
 }

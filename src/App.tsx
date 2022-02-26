@@ -1,23 +1,13 @@
-import './App.css';
 import React from 'react';
-import Counter from '~/components/Counter/Counter';
-import { ReactComponent as Logo } from './logo.svg';
+import JoinForm from '~/components/JoinForm/JoinForm';
+import { GlobalStyles } from '~/styles/GlobalStyles';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 function App() {
-  const [count, setCount] = React.useState(0);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo width={'100%'} height={'40vmin'} />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <Counter count={count} />
-      </header>
+    <div className="main-container d-table position-absolute m-auto">
+      <JoinForm />
     </div>
   );
 }
